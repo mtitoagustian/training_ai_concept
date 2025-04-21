@@ -1,0 +1,14 @@
+Employee_ID,Full_Name,Age,Gender,Email,City,Department,Salary,Join_Date
+EMP001,iqbal h,25,Male,iqbal@mail.com,jakarta,Engineering,6.000.000,01/01/2021
+EMP002,Erza W,-5,Male,erza@@mail.com,Surabyaa,Marketing,8000000,02-01-2021
+EMP003,ISA F,32,,isa@mail.com,Bandung,Engineering,15.000.000,2021/01/08
+EMP004,hastri a,26,female,-,yogyakarta,HR,100000000,04/01/2021
+EMP005,Rian S,NaN,Male,rian@company,medan,Finance,9000000,05-01-21
+EMP006,Lina K,21,Female,lina@mail.com,Bekasi,finance,0,2021-13-01
+EMP007,Adi P,150,male,adi@mail.com,Depok,Engineering,7000000,2021-01-06
+EMP008,Sari J,28,FEMALE,sari@mail,Bandung,HR,-50000,01/01/2021
+EMP009,  ,30,Male,,Bandung,Sales,8500000,01-01-2021
+EMP010,Rina L,29,Female,rina.l@mail.com,Jakarta,marketing,NaN,2021/01/15
+EMP003,ISA F,32,,isa@mail.com,Bandung,Engineering,15.000.000,2021/01/08
+EMP007,Adi P,150,male,adi@mail.com,Depok,Engineering,7000000,2021-01-06
+EMP004,hastri a,26,female,-,yogyakarta,HR,100000000,04/01/2021
