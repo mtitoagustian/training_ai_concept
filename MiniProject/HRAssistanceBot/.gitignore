@@ -1,0 +1,3 @@
+# Ignore the models and envHRbot directories
+models/
+envHRbot/
