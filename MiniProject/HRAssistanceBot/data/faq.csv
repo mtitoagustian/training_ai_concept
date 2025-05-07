@@ -1,0 +1,8 @@
+Kategori,Subkategori,Pertanyaan,Jawaban
+Compensation & Benefit,Payroll & Salary,Tanggal berapa gajian dimodena?,"Setiap tanggal 25 dibulan tersebut dan jika tanggal 25 dihari libur makan akan dibayarkan dihari sebelumnya"
+Compensation & Benefit,Payroll & Salary,Tanggal berapa cut off payroll?,"21 Bulan sebelumnya – 20 Bulan Berjalan"
+Compensation & Benefit,Payroll & Salary,saya baru join dibawah tanggal 20 gimana cut off payrollnya?,"Jumlah hari kerja Pekerja bekerja (hari libur tidak dihitung) / Pembagi hari kerja X Gaji Pokok"
+,Payroll & Salary,saya baru join diatas tanggal 20 gimana cut off payrollnya?,"Jumlah hari kerja Pekerja bekerja (hari libur tidak dihitung) / Pembagi hari kerja X Gaji Pokok"
+Compensation & Benefit,Kehadiran,Tanggal berapa cut off absensi?,"16 Bulan sebelumnya – 15 Bulan berjalan"
+,Kehadiran,Tanggal berapa koreksi absensi di close?,"Tanggal 16 bulan tersebut jam 12 siang"
+,Kehadiran,Bagaimana jika lupa koreksi absensi?,"Sudah tidak bisa dilakukan koreksi jika sudah diclose"
