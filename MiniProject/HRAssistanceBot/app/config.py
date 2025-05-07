@@ -1,11 +1,11 @@
-import os
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    api_faq_source: str = "https://your-data-api.com/faqs"
-    api_logging_endpoint: str = "https://your-log-api.com/logs"
-    debug: bool = False
-    mode: str = "dev"  # ➕ Tambahan ini untuk menentukan mode (dev/prod)
+    CSV_PATH: str = "data/faq.csv"
+    API_ENDPOINT: str = ""
+    USE_API: bool = False
+    EMBEDDING_MODEL: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    GENERATOR_MODEL: str = "cahya/bert2bert-indonesian-summarization"
 
     class Config:
         env_file = ".env"

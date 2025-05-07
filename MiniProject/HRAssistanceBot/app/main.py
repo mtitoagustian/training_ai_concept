@@ -1,55 +1,34 @@
-"""
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from app.rag_engine import RAGHRBot
-from app.api_utils import log_interaction
 
-app = FastAPI(title="HR Assistance Bot")
+app = FastAPI(title="HR Chatbot", version="1.0")
 bot = RAGHRBot()
 
-class QueryRequest(BaseModel):
+class Query(BaseModel):
     question: str
-    language: str = "id"
+
+class Feedback(BaseModel):
+    question: str
+    answer: str
+    feedback: str
+
+@app.get("/")
+def read_root():
+    return {"message": "HR Assistant Bot is running."}
 
 @app.post("/ask")
-def ask_question(req: QueryRequest):
+def ask_bot(query: Query):
     try:
-        answer = bot.get_answer(req.question)
-        log_interaction(req.question, answer, req.language)
-        return {"question": req.question, "answer": answer}
+        answer = bot.get_answer(query.question)
+        return {"question": query.question, "answer": answer}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-"""
 
-# filepath: app/main.py
-
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from app.rag_engine import RAGHRBot
-from app.api_utils import log_interaction
-from app.config import settings
-
-app = FastAPI(title="HR Assistance Bot")
-bot = RAGHRBot()
-
-class QueryRequest(BaseModel):
-    question: str
-    language: str = "id"
-
-@app.post("/ask")
-def ask_question(req: QueryRequest):
+@app.post("/feedback")
+def give_feedback(feedback: Feedback):
     try:
-        # Jawab pertanyaan
-        answer = bot.get_answer(req.question)
-
-        # Log interaksi ke API atau file tergantung config
-        if settings.api_logging_endpoint:
-            log_interaction(req.question, answer, req.language)
-
-        return {
-            "question": req.question,
-            "answer": answer
-        }
-
+        result = bot.provide_feedback(feedback.question, feedback.answer, feedback.feedback)
+        return {"message": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

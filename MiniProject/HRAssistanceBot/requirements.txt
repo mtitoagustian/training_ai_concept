@@ -10,3 +10,6 @@ sentencepiece
 blobfile
 tiktoken
 protobuf
+pydantic_settings
+pytest
+python-dotenv
